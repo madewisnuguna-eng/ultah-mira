@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun! 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ 
+  <audio id="bgMusic" loop>
+    <source src="music/about_you.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+
+  <button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="Play / Pause Musik">
+    <span id="musicIcon">🎵</span>
+  </button>
+
+
+  <section class="hero" id="hero">
+    <div class="hero-content card">
+      <div class="cake">🎂</div>
+      <h1>Happy Birthdayy</h1>
+      <div class="name" id="nama">Untukmu Tersayang 💖</div>
+      <p class="message" id="pesan">
+        Semoga di hari spesialmu ini, kebahagiaan selalu menyertaimu,
+        impianmu tercapai, dan setiap langkahmu dipenuhi berkah.
+        Tetaplah jadi pribadi yang luar biasa! ✨
+      </p>
+      <button class="cta" onclick="tampilKejutan()">Click me! 🎁</button>
+      <div id="surprise"></div>
+      <a href="#galeri" class="scroll-hint">See Gallery</a>
+    </div>
+  </section>
+
+
+  <section class="gallery-section" id="galeri">
+    <h2 class="section-title">📸 Beautiful moment</h2>
+    <p class="section-subtitle">A collection of beautiful moments</p>
+
+    <div class="gallery">
+      <div class="photo" onclick="openLightbox(this)">
+        <img src="image/p1.jpeg" alt="Kenangan 1" onerror="this.src='https://picsum.photos/400/400?random=1'">
+      </div>
+      <div class="photo" onclick="openLightbox(this)">
+        <img src="image/p2.jpeg" alt="Kenangan 2" onerror="this.src='https://picsum.photos/400/400?random=2'">
+      </div>
+      <div class="photo" onclick="openLightbox(this)">
+        <img src="image/p3.jpeg" alt="Kenangan 3" onerror="this.src='https://picsum.photos/400/400?random=3'">
+      </div>
+      <div class="photo" onclick="openLightbox(this)">
+        <img src="image/p4.jpeg" alt="Kenangan 4" onerror="this.src='https://picsum.photos/400/400?random=4'">
+      </div>
+      <div class="photo" onclick="openLightbox(this)">
+        <img src="image/p5.jpeg" alt="Kenangan 5" onerror="this.src='https://picsum.photos/400/400?random=5'">
+      </div>
+      <div class="photo" onclick="openLightbox(this)">
+        <img src="image/p6.jpeg" alt="Kenangan 6" onerror="this.src='https://picsum.photos/400/400?random=6'">
+      </div>
+      <div class="photo" onclick="openLightbox(this)">
+        <img src="image/p7.jpeg" alt="Kenangan 6" onerror="this.src='https://picsum.photos/400/400?random=6'">
+      </div>
+      <div class="photo" onclick="openLightbox(this)">
+        <img src="image/p8.jpeg" alt="Kenangan 6" onerror="this.src='https://picsum.photos/400/400?random=6'">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="message-section">
+    <div class="message-card">
+      <h2>💌 Special Message</h2>
+      <p class="message-text">
+        "Thank you for being the most beautiful part of my life.
+        May each passing year bring even more
+        laughter, love, and happiness. Happy birthday"
+      </p>
+      <p class="signature">— With love 💕</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Made for You ❤️</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImg" src="" alt="Preview">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
